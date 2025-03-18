@@ -10,23 +10,27 @@ My design rationale for the typograph and the colour pallete ..
 body{
     background-color:beige;
     font-size: 1.1rem;
-    font-family:Verdana;
+    font-family: "Poiret One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     line: height 1.3em;
       /* put font here for full body  */
+}
 
     section{
     text-align: center;
     border:1px solid black
-
+    }
 
 
 
 h1{
 color:blue;
-} text- transform:uppercase;
+text- transform:uppercase;
 font-family: "Poiret One", sans-serif;
 font-weight: 400;
 font-style: normal;
+}
 
 h2{
 color:blue;
