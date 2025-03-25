@@ -1,0 +1,27 @@
+body {
+  font-size: 1.2 rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font: weight 700;
+  margin: bottom 20px;
+  margin: top 40px;
+  
+}
+
+p {
+  border: 1px solid crimson;
+  width:400px;
+ min-height 100px;
+  margin: 0 auto; /* horizontal centering */
+  /* padding-left:20px;
+  padding: bottom 30px;; */
+  padding:30px;
+  
+  
+}
+.center
+line-height:260px;
+/* height 300 padding 20 30-20-20 */

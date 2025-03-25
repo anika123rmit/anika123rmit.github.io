@@ -1,4 +1,4 @@
-
+add comments and image on website 
 
 
 body{
@@ -8,6 +8,7 @@ font family
 font:weight 400px;
 font-style:normal;
 line: height 1.3em;
+
 }
 
 
@@ -15,6 +16,14 @@ section{
     text-align:center;
     border:1px solid black
     }
+
+    p {
+        border: 1px solid crimson;
+        width:400px;
+       min-height 100px;
+        margin: 0 auto; /* horizontal centering */
+        
+      }
 
 
 
