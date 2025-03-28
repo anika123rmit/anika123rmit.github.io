@@ -1,55 +1,43 @@
-add comments and image on website 
-
-
-body{
-background-color:aliceblue;
-font size: 1.1em;
-font family
-font:weight 400px;
-font-style:normal;
-line: height 1.3em;
-
+its still not working and this is my code in the style.css-    body{
+    background-color:aliceblue;
+    font-size: 1.1em;
+    line-height:  1.3em;
+    font-weight 400px;
+    font-family
+    font-style:normal;
+   
+    
 }
 
-
-section{ 
-    text-align:center;
-    border:1px solid black
-    }
-
-    p {
-        border: 1px solid crimson;
-        width:400px;
-       min-height 100px;
-        margin: 0 auto; /* horizontal centering */
-        
-      }
-
-
-
-    h1{
-        color:black;
-
-        font-family: "Boldonse", system-ui;
-         font-weight: 400;
-        font-style: normal;
-        }
-
-
-        h2{
-            font-family: "Shadows Into Light", cursive;
-            font-weight: 400;
+section{
+text-align: center;
+border:1px solid black;
+}
+    
+    
+        h1{
+            color:black;
+    
+            font-family: "Boldonse", system-ui;
+             font-weight: 400;
             font-style: normal;
-        }
-
-
-        h3{
-            font-family: "Shadows Into Light", cursive;
-            font-weight: 400;
-            font-style: normal;
-              }
-              
-
-        h3{
-            color:red;
             }
+    
+    
+            h2{
+                font-family: "Shadows Into Light", cursive;
+                font-weight: 400;
+                font-style: normal;
+            }
+    
+    
+            h3{
+                font-family: "Shadows Into Light", cursive;
+                font-weight: 400;
+                font-style: normal;
+                  }
+                  
+    
+            h3{
+                color:red;
+                }
