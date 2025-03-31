@@ -173,3 +173,23 @@ p,
 #thirteenth-para {
   color: white;
 }
+
+h1 {
+  color: white !important;
+  text-align: center; /* Optional: Centers the heading */
+}
+
+/* Center image inside container */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  align-items: center; /* Centers vertically */
+  height: auto; /* Adjust height if needed */
+  margin-top: 20px; /* Adds spacing if necessary */
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
