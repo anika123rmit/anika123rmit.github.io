@@ -1,5 +1,5 @@
 body {
-  background-color: aliceblue;
+  background-color: black;
   /* The colour pallete of aliceblue and red typography for the headings contrasts with each other. 
   The aliceblue shade is not too strong but not too light either */
   font-size: 1.1em;
@@ -10,10 +10,10 @@ body {
 
 section {
   text-align: center;
-  border: 6px solid black;
+  border: 6px solid white;
   /* a thick border ensures clarity between text and edges of page */
   margin: 20px;
-  border: 4px solid black;
+  border: 4px solid white;
 }
 
 .image-container {
@@ -142,5 +142,34 @@ p {
   /* a dashed border around the pictures adds to the colourful appearance of Palat's website  */
   width: 500px;
   height: 200px;
-  border-color: blue;
+  border-color: white;
+}
+body {
+  background-color: black;
+  color: white;
+}
+
+h1 {
+  color: white;
+}
+
+h2 {
+  color: red;
+}
+
+p,
+#first-para,
+#second-para,
+#third-para,
+#fourth-para,
+#fifth-para,
+#sixth-para,
+#seventh-para,
+#eighth-para,
+#ninth-para,
+#tenth-para,
+#eleventh-para,
+#twelfth-para,
+#thirteenth-para {
+  color: white;
 }
