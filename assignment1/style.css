@@ -107,7 +107,7 @@ section {
 
 h1 {
   color: black;
-
+  text-align: center;
   font-family: "Boldonse", system-ui;
   /* The Boldonse border highlights the title and seperates it from the rest of the contents on the page  */
   font-weight: 400;
@@ -117,6 +117,7 @@ h1 {
 h2 {
   font-family: "Shadows Into Light", cursive;
   /* The use of a playful, casual font encourages the reader to be attracted to the webpage  */
+  text-align: center;
   font-weight: 400;
   font-style: normal;
 }
