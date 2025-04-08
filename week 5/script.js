@@ -21,3 +21,20 @@ console.log("Hello", myNewName, myCity);
   console.log("Hello", a);
 }
 console.log("Hello", a);
+
+// week 6
+let a = 10;
+let b = 20;
+function add(val1, val2) {
+  // fucntion can also be function subtract
+  // val1-val2
+  let sum = val1 + val2;
+  console.log(sum);
+  return sum;
+}
+let total = add(10, 20);
+console.log(total);
+total = add(a, b);
+console.log(total);
+total = subtract(a, b);
+console.log(total);
