@@ -1,7 +1,7 @@
 :root {
   --primary-bg-color: #dbed83;
   --text-color: #333;
-  --main-bg-color: #333;
+  --main-bg-color: #4f4fdb;
   --main-text-color: #fff;
   --main-btn-bg-color: #938989;
 }
@@ -25,11 +25,7 @@ body {
   justify-content: space-between;
 }
 
-/* Add additional styles as needed */
-
-/* Create a container for the main content */
-
-/* Header styling */
+/* Header Styling */
 header {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -38,7 +34,7 @@ header {
   width: 100%;
 }
 
-/* Navigation styling */
+/* Navigation Styling */
 nav {
   margin-top: 20px;
   text-align: center;
@@ -59,16 +55,21 @@ nav a {
   color: var(--text-color);
 }
 
-/* Media player styling */
+/* Media Player Styling */
 .media-player {
   width: 100%;
   margin: 0 auto;
+  text-align: center; /* Center the video */
 }
 
 .media-player video {
   max-width: 100%;
+  height: auto;
+  display: block; /* Prevents any unexpected margin or spacing */
+  margin-bottom: 20px; /* Adds spacing between video and text */
 }
 
+/* Custom Controls Styling */
 .custom-controls {
   display: flex;
   justify-content: space-between;
@@ -89,6 +90,7 @@ nav a {
   align-items: center;
 }
 
+/* Progress Bar Styling */
 .progress-bar {
   width: 100%;
   height: 10px;
@@ -105,7 +107,7 @@ nav a {
   transition: width 0.3s ease;
 }
 
-/* Footer styling */
+/* Footer Styling */
 footer {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -114,11 +116,64 @@ footer {
   width: 100%;
 }
 
+/* Styling for Video and Text Section */
+.video-text-wrapper {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; /* Keeps it responsive for smaller screens */
+  margin: 40px auto;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+.left-side,
+.right-side {
+  flex: 1;
+  min-width: 300px;
+}
+
+.tutorial-video {
+  width: 100%;
+  max-width: 800px; /* Adjust width as necessary */
+  height: auto;
+  border-radius: 12px;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Right Side Content (Text) Styling */
+.right-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-side h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+/* Additional styling for other website elements */
 h1 {
   color: white;
   text-align: center;
   font-family: "Crafty Girls", cursive;
-  /* The Boldonse border highlights the title and seperates it from the rest of the contents on the page  */
   font-weight: 400;
-  font-style: normal;
+  font-size: 24px;
+  text-decoration: underline;
+}
+
+li a {
+  color: blue;
+  text-align: center;
+  font-family: "Crafty Girls", cursive;
+  font-weight: 400;
+  font-size: 30px;
 }
