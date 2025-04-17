@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap"
       rel="stylesheet"
     />
-    <script src="script.js" defer></script>
   </head>
 
   <body>
@@ -48,13 +48,13 @@
 
     <!-- Header Section -->
     <header>
-      <h1>Crafting 4 Fun </h1>
+      <h1>Crafting 4 Fun</h1>
     </header>
 
     <!-- Navigation Section -->
     <nav>
       <ul>
-        <li><a href="#">Handheld Windmill Tutorial </a></li>
+        <li><a href="#">Handheld Windmill Tutorial</a></li>
       </ul>
     </nav>
 
@@ -75,59 +75,81 @@
         <!-- Right Side: Text Content -->
         <div class="right-side">
           <h2>How to create a windmill:</h2>
-          
 
-<p><strong>Materials required:</strong></p>
-<ul>
-  <li>Sheets of foam,
-   <li>1 pair of scissors,
-   <li>Paper straws,
-  <li>Pen,
-  <li>Ruler,
-  <li>Hole puncher,
-  <li>Pipe cleaners,
-  <li>Colorful straws
-</ul>
+          <p><strong>Materials required:</strong></p>
+          <ul>
+            <li>Sheets of foam,</li>
+            <li>1 pair of scissors,</li>
+            <li>Paper straws,</li>
+            <li>Pen,</li>
+            <li>Ruler,</li>
+            <li>Hole puncher,</li>
+            <li>Pipe cleaners,</li>
+            <li>Colorful straws</li>
+          </ul>
 
+          <div class="Instructions">
+            <h2>Instructions:</h2>
+          </div>
 
-<div class="Instructions">
-  <h2>Instructions:</h2>
-  <p>
+          <ol>
+            <li>Using the ruler, cut out a 12.5 cm foam piece.</li>
+            <li>Fold the paper in half to form a triangle.</li>
+            <li>
+              Repeat step 2 by turning the paper in the opposite direction.
+            </li>
+            <li>Using a pen, draw a hole in the middle of the paper folds.</li>
+            <li>Use the hole puncher to make a hole in the centre.</li>
+            <li>Use a hole puncher to create holes along creases.</li>
+            <li>
+              Fold every second paper slit in the middle to meet the hole.
+            </li>
+            <li>Cut 5-6 rounds from the colourful foam sheets.</li>
+            <li>
+              Use the hole puncher to make a hole in the centre of the circles.
+            </li>
+            <li>Wrap a pipe cleaner around a straw.</li>
+            <li>
+              Insert one of the circles through the straw and push all the way
+              to the pipe cleaner.
+            </li>
+            <li>
+              Insert the pipe cleaner through the back hole in the main foam
+              piece, ensuring the straw is facing up.
+            </li>
+            <li>
+              Add another cut-out circle on top of the pipe cleaner from the
+              front.
+            </li>
+            <li>
+              To shorten the pipe cleaner, cut a small portion off with
+              scissors.
+            </li>
+            <li>Wrap a pipe cleaner around like a snail.</li>
+            <li>
+              Blow wind into the windmill using your mouth and watch it whirl!
+            </li>
 
-  </p>
-</div>
-
-<ol>
-  <li>Using the ruler, cut out a 12.5 cm foam piece.</li>
-  <li>Fold the paper in half to form a triangle.</li>
-  <li>Repeat step 2 by turning the paper in the opposite direction.</li>
-  <li>Using a pen, draw a hole in the middle of the paper folds.</li>
-  <li>Use the hole puncher to make a hole in the centre.</li>
-  <li>Use a hole puncher to create holes along creases.</li>
-  <li>Fold every second paper slit in the middle to meet the hole.</li>
-  <li>Cut 5-6 rounds from the colourful foam sheets.</li>
-  <li>Use the hole puncher to make a hole in the centre of the circles.</li>
-  <li>Wrap a pipe cleaner around a straw.</li>
-  <li>Insert one of the circles through the straw and push all the way to the pipe cleaner.</li>
-  <li>Insert the pipe cleaner through the back hole in the main foam piece, ensuring the straw is facing up.</li>
-  <li>Add another cut-out circle on top of the pipe cleaner from the front.</li>
-  <li>To shorten the pipe cleaner, cut a small portion off with scissors.</li>
-  <li>Wrap a pipe cleaner around like a snail.</li>
-  <li>Blow wind into the windmill using your mouth and watch it whirl!</li>
- 
-  <div class="special-tip">
-    <h3>Special tip: What to do if the windmill isn't working?</h3>
-    <p>
-      Use your hands to create a little gap between the windmill and the pipe. Push them apart slightly. Then, try blowing wind at the windmill again.
-    </p>
-  </div>
-
-
+            <div class="special-tip">
+              <h3>Special tip: What to do if the windmill isn't working?</h3>
+              <p>
+                Use your hands to create a little gap between the windmill and
+                the pipe. Push them apart slightly. Then, try blowing wind at
+                the windmill again.
+              </p>
+            </div>
+          </ol>
         </div>
       </div>
-        <span id="progress-bar-fill"></span>
-        </div>
-      </div>
+
+      <!-- Video Navigation -->
+      <nav class="video-nav">
+        <button onclick="seekVideo(0)">Intro</button>
+        <button onclick="seekVideo(15)">Materials walkthrough</button>
+        <button onclick="seekVideo(41)">Starting Steps - Part 1</button>
+        <button onclick="seekVideo(215)">Part 2</button>
+        <button onclick="seekVideo(184)">Combining parts together</button>
+      </nav>
     </main>
 
     <!-- Footer Section -->
@@ -150,5 +172,7 @@
         padding: 0;
       "
     ></div>
+
+    <script src="script.js"></script>
   </body>
 </html>
