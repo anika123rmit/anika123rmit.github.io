@@ -54,7 +54,7 @@
     <!-- Navigation Section -->
     <nav>
       <ul>
-        <li><a href="#">Handheld Windmill Tutorial</a></li>
+        <li><a href="#">Handheld Windmill Tutorial- toddler safe and easy to make!</a></li>
       </ul>
     </nav>
 
@@ -68,26 +68,11 @@
               src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
               type="video/mp4"
             />
-            Your browser does not support the video tag.
+         
           </video>
         </div>
-
-        <!-- Right Side: Text Content -->
+            <!-- Right Side: Text Content -->
         <div class="right-side">
-          <h2>How to create a windmill:</h2>
-
-          <p><strong>Materials required:</strong></p>
-          <ul>
-            <li>Sheets of foam,</li>
-            <li>1 pair of scissors,</li>
-            <li>Paper straws,</li>
-            <li>Pen,</li>
-            <li>Ruler,</li>
-            <li>Hole puncher,</li>
-            <li>Pipe cleaners,</li>
-            <li>Colorful straws</li>
-          </ul>
-
           <div class="Instructions">
             <h2>Instructions:</h2>
           </div>
@@ -150,6 +135,33 @@
         <button onclick="seekVideo(215)">Part 2</button>
         <button onclick="seekVideo(184)">Combining parts together</button>
       </nav>
+
+<!-- Main Content Section -->
+<main class="container">
+  <div class="video-text-wrapper">
+    <!-- Left Side: Video -->
+    <div class="left-side">
+      <video class="tutorial-video" id="custom-video-player" controls>
+        <source
+          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
+          type="video/mp4"
+        />
+        Your browser does not support the video tag.
+      </video>
+
+      <!-- Timestamp Navigation Buttons -->
+      <div class="video-nav">
+        <button onclick="seekToTime(0)">Intro</button>
+        <button onclick="seekToTime(10)">Step 1</button>
+        <button onclick="seekToTime(25)">Final Result</button>
+      </div>
+    </div>
+
+    <!-- Right Side: Description or other content -->
+    <div class="right-side">
+      <!-- Your text content goes here -->
+    </div>
+  </div>
     </main>
 
     <!-- Footer Section -->
@@ -172,6 +184,16 @@
         padding: 0;
       "
     ></div>
+
+
+    <script>
+      function seekToTime(seconds) {
+        const video = document.getElementById("custom-video-player");
+        video.currentTime = seconds;
+        video.play(); // Optional: auto-play after jumping
+      }
+    </script>
+    
 
     <script src="script.js"></script>
   </body>
