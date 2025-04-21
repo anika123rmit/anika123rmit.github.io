@@ -1,10 +1,9 @@
-<!-- PARTIALLY DEVELOPED CODE FROM CANVAS -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Crafting 4 Fun</title>
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,26 +16,111 @@
       href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap"
       rel="stylesheet"
     />
+    <style>
+      /* Add inline fix for layout */
+      .container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+      }
+
+      .video-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: 1200px;
+        width: 100%;
+        gap: 30px;
+        padding: 30px 20px;
+      }
+
+      .tutorial-video-wrapper {
+        flex: 1;
+        min-width: 0;
+      }
+
+      .tutorial-video {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border: 5px solid #f47eb7;
+        border-radius: 12px;
+        margin-bottom: 20px;
+      }
+
+      .video-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: flex-start;
+      }
+
+      .video-nav button {
+        flex-shrink: 0;
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        font-size: 16px;
+        cursor: pointer;
+        font-family: "Shadows Into Light Two", cursive;
+        transition: background-color 0.3s ease;
+        outline: 2px solid #f47eb7;
+        outline-offset: 2px;
+      }
+
+      .instructions {
+        flex: 1;
+        max-width: 600px;
+        font-size: 18px;
+        font-family: "Shadows Into Light Two", cursive;
+        color: black;
+      }
+
+      @media (max-width: 768px) {
+        .video-section {
+          flex-direction: column;
+        }
+
+        .instructions,
+        .tutorial-video-wrapper {
+          width: 100%;
+        }
+
+        .video-nav {
+          justify-content: center;
+        }
+
+        .video-nav button {
+          width: 90%;
+        }
+      }
+    </style>
   </head>
 
+  <div class="bottom-left-image">
+    <img src="123.PNG" alt="Description of image" />
+  </div>
+
   <body>
+    <!-- CANVAS PROVIDED CODE -->
     <script>
       (function () {
         (() => {
           try {
-            if (!setInterval) {
-              console.log("no setInterval");
-              return;
-            }
+            if (!setInterval) return;
             setInterval(() => {
               let t = document.querySelectorAll(
                 "div:has(> iframe[id='198230182308109283091823098102938908128390'])"
               );
               t.forEach((t) => {
                 let e = t.getAttribute("style");
-                e &&
-                  ((e = e.replace("display: initial", "display: none")),
-                  t.setAttribute("style", e));
+                if (e) {
+                  e = e.replace("display: initial", "display: none");
+                  t.setAttribute("style", e);
+                }
               });
             }, 100);
           } catch (t) {
@@ -45,38 +129,50 @@
         })();
       })();
     </script>
+    <!-- CANVAS PROVIDED CODE END -->
 
-    <!-- Header Section -->
     <header>
       <h1>Crafting 4 Fun</h1>
     </header>
 
-    <!-- Navigation Section -->
     <nav>
       <ul>
-        <li><a href="#">Handheld Windmill Tutorial- toddler safe and easy to make!</a></li>
+        <li>
+          <a href="#"
+            >Handheld Windmill Tutorial - toddler safe and easy to make!</a
+          >
+        </li>
       </ul>
     </nav>
 
-    <!-- Main Content Section -->
     <main class="container">
-      <div class="video-text-wrapper">
-        <!-- Left Side: Video -->
-        <div class="left-side">
+      <div class="video-section">
+        <!-- LEFT: VIDEO + BUTTONS -->
+        <div class="tutorial-video-wrapper">
           <video class="tutorial-video" id="custom-video-player" controls>
             <source
               src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
               type="video/mp4"
             />
-         
+            Your browser does not support the video tag.
           </video>
-        </div>
-            <!-- Right Side: Text Content -->
-        <div class="right-side">
-          <div class="Instructions">
-            <h2>Instructions:</h2>
-          </div>
 
+          <div class="video-nav">
+            <button onclick="seekToTime(2)">Intro</button>
+            <button onclick="seekToTime(15)">Materials</button>
+            <button onclick="seekToTime(41)">Part 1</button>
+            <button onclick="seekToTime(184)">Combining parts together</button>
+            <button onclick="seekToTime(215)">Part 2</button>
+          </div>
+        </div>
+
+        <div class="bottom-left-image">
+          <img src="123.PNG" alt="Description of image" />
+        </div>
+
+        <!-- RIGHT: INSTRUCTIONS -->
+        <div class="instructions">
+          <h2>Instructions:</h2>
           <ol>
             <li>Using the ruler, cut out a 12.5 cm foam piece.</li>
             <li>Fold the paper in half to form a triangle.</li>
@@ -114,87 +210,31 @@
             <li>
               Blow wind into the windmill using your mouth and watch it whirl!
             </li>
-
-            <div class="special-tip">
-              <h3>Special tip: What to do if the windmill isn't working?</h3>
-              <p>
-                Use your hands to create a little gap between the windmill and
-                the pipe. Push them apart slightly. Then, try blowing wind at
-                the windmill again.
-              </p>
-            </div>
           </ol>
+
+          <div class="special-tip">
+            <h3>Special tip: What to do if the windmill isn't working?</h3>
+            <p>
+              Use your hands to create a little gap between the windmill and the
+              pipe. Push them apart slightly. Then, try blowing wind at the
+              windmill again.
+            </p>
+          </div>
         </div>
       </div>
-
-      <!-- Video Navigation -->
-      <nav class="video-nav">
-        <button onclick="seekVideo(0)">Intro</button>
-        <button onclick="seekVideo(15)">Materials walkthrough</button>
-        <button onclick="seekVideo(41)">Starting Steps - Part 1</button>
-        <button onclick="seekVideo(215)">Part 2</button>
-        <button onclick="seekVideo(184)">Combining parts together</button>
-      </nav>
-
-<!-- Main Content Section -->
-<main class="container">
-  <div class="video-text-wrapper">
-    <!-- Left Side: Video -->
-    <div class="left-side">
-      <video class="tutorial-video" id="custom-video-player" controls>
-        <source
-          src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
-          type="video/mp4"
-        />
-        Your browser does not support the video tag.
-      </video>
-
-      <!-- Timestamp Navigation Buttons -->
-      <div class="video-nav">
-        <button onclick="seekToTime(0)">Intro</button>
-        <button onclick="seekToTime(10)">Step 1</button>
-        <button onclick="seekToTime(25)">Final Result</button>
-      </div>
-    </div>
-
-    <!-- Right Side: Description or other content -->
-    <div class="right-side">
-      <!-- Your text content goes here -->
-    </div>
-  </div>
     </main>
 
-    <!-- Footer Section -->
     <footer>
-      <p>&copy; Video Credit- Berry Bunch Family</p>
-      <a href="https://icons8.com/icon/59862/play">Play</a> icon by
-      <a href="https://icons8.com">Icons8</a>
-      <a href="https://icons8.com/icon/61012/pause">Pause</a> icon by
-      <a href="https://icons8.com">Icons8</a>
+      <p>&copy; Video Credit - Berry Bunch Family</p>
+      <p>&copy; Artwork Credit - Anika Choubey (s4095477)</p>
     </footer>
-
-    <div
-      id="settings-manager-container"
-      style="
-        position: relative;
-        z-index: 9147483646;
-        width: 0 !important;
-        height: 0 !important;
-        margin: 0;
-        padding: 0;
-      "
-    ></div>
-
 
     <script>
       function seekToTime(seconds) {
         const video = document.getElementById("custom-video-player");
         video.currentTime = seconds;
-        video.play(); // Optional: auto-play after jumping
+        video.play();
       }
     </script>
-    
-
-    <script src="script.js"></script>
   </body>
 </html>

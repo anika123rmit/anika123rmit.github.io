@@ -4,6 +4,10 @@
   --main-bg-color: #4f4fdb;
   --main-text-color: #fff;
   --main-btn-bg-color: #938989;
+  --accent-color: #f47eb7;
+  --link-color: blue;
+  --btn-bg: #4caf50;
+  --btn-hover-bg: #388e3c;
 }
 
 body,
@@ -49,59 +53,67 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: blue;
+  color: var(--link-color);
   font-family: "Crafty Girls", cursive;
   font-size: 30px;
 }
 
-/* Main Video Section */
+/* 💡 CHANGED: Main Video Section */
 .video-section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 40px 20px;
   max-width: 1200px;
   width: 100%;
+  gap: 20px; /*  REDUCED from 40px to bring elements closer */
+  flex-wrap: wrap; /* 🆕 ADDED: allows wrapping to avoid layout breakage */
 }
 
+/* Video Styling */
 .tutorial-video {
-  width: 100%;
-  max-width: 800px;
+  width: 55%; /*  INCREASED from 48% for better visibility */
   height: auto;
-  border: 5px solid #f47eb7;
+  border: 5px solid var(--accent-color);
   border-radius: 12px;
   box-sizing: border-box;
   margin-bottom: 20px;
 }
 
-/* Video Navigation Buttons */
+/* Instructions Styling */
+.instructions {
+  width: 40%;
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+  font-family: "Shadows Into Light Two", cursive;
+}
+
+/* CHANGED: Video Navigation Buttons */
 .video-nav {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
+  gap: 10mm; /* Set the gap to 10mm between buttons */
+  flex-wrap: wrap; /* 🆕 ADDED: allows buttons to wrap */
   margin-top: 10px;
 }
 
 .video-nav button {
-  background-color: #4caf50;
+  background-color: var(--btn-bg);
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px; /* 💡 REDUCED horizontal padding */
   border: none;
   border-radius: 8px;
-  font-size: 16px;
+  font-size: 14px; /* 💡 SLIGHTLY smaller to avoid button spillover */
   cursor: pointer;
   font-family: "Shadows Into Light Two", cursive;
   transition: background-color 0.3s ease;
-}
-
-.video-nav button {
-  outline: 2px solid #f47eb7;
-  outline-offset: 2px;
+  outline: none; /* REMOVED the outline to prevent the pink outline */
+  max-width: 100%; /* 🆕 ADDED: ensures buttons don’t overflow */
 }
 
 .video-nav button:hover {
-  background-color: #388e3c;
+  background-color: var(--btn-hover-bg);
 }
 
 /* Footer Styling */
@@ -124,7 +136,7 @@ h1 {
 }
 
 h2 {
-  color: blue;
+  color: var(--link-color);
   font-family: "Crafty Girls", cursive;
   font-size: 24px;
   text-decoration: underline;
@@ -148,7 +160,7 @@ ul {
 }
 
 strong {
-  color: blue;
+  color: var(--link-color);
   font-family: "Crafty Girls", cursive;
 }
 
@@ -156,20 +168,28 @@ strong {
 .special-tip {
   margin-top: 30px;
   padding: 15px;
-  background-color: #f47eb7;
+  background-color: var(--accent-color);
   border-radius: 8px;
 }
 
-.special-tip h3 {
-  color: black;
-}
-
+.special-tip h3,
 .special-tip p {
   color: black;
 }
 
 /* Responsive for Small Screens */
 @media (max-width: 768px) {
+  .video-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tutorial-video,
+  .instructions {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+
   .video-nav {
     flex-direction: column;
     align-items: center;
@@ -191,4 +211,19 @@ strong {
   p {
     font-size: 16px;
   }
+}
+
+/* Styling for Bottom-Left Image */
+.bottom-left-image {
+  position: absolute; /* Changed from fixed to absolute for placement within the page flow */
+  bottom: -330px; /* Adjusted to position it just under the buttons */
+  left: 52px; /* Left position */
+  z-index: 10;
+}
+
+.bottom-left-image img {
+  width: 550px; /* Adjust image size */
+  height: auto; /* Maintain aspect ratio */
+  border: 5px solid var(pink); /* Pink border around the image */
+  border-radius: 8px; /* Optional: Rounded corners for the border */
 }
