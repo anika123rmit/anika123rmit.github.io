@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crafting 4 Fun</title>
+    <!--  By adding this title, the website appears to be a friendly, learn to craft website, being encouraging and appealing to youngsters -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -17,7 +18,7 @@
       rel="stylesheet"
     />
     <style>
-      /* Add inline fix for layout */
+      /* due to some consistent errors occuring with the "side by side" layout, I had to place this piece of code here instead of putting it in the style.css section to make the appearance of the website and media player work properly.  */
       .container {
         display: flex;
         justify-content: center;
@@ -59,6 +60,7 @@
       .video-nav button {
         flex-shrink: 0;
         background-color: #4caf50;
+        /* having green buttons on a light yellow background contrast well and the background ensures the green buttons "pop" appearance wise. */
         color: white;
         padding: 10px 16px;
         border: none;
@@ -67,8 +69,6 @@
         cursor: pointer;
         font-family: "Shadows Into Light Two", cursive;
         transition: background-color 0.3s ease;
-        outline: 2px solid #f47eb7;
-        outline-offset: 2px;
       }
 
       .instructions {
@@ -103,9 +103,10 @@
   <div class="bottom-left-image">
     <img src="123.PNG" alt="Description of image" />
   </div>
+  <!--  the addition of a windmill image ( created through illustrator) filled in the odd gap that was prevelant before in the bottom left hand corner of the website-->
 
   <body>
-    <!-- CANVAS PROVIDED CODE -->
+    <!-- CANVAS PROVIDED  MAIN CODE -->
     <script>
       (function () {
         (() => {
@@ -129,7 +130,7 @@
         })();
       })();
     </script>
-    <!-- CANVAS PROVIDED CODE END -->
+    <!-- CANVAS PROVIDED MAIN  CODE END -->
 
     <header>
       <h1>Crafting 4 Fun</h1>
@@ -147,14 +148,12 @@
 
     <main class="container">
       <div class="video-section">
-        <!-- LEFT: VIDEO + BUTTONS -->
         <div class="tutorial-video-wrapper">
           <video class="tutorial-video" id="custom-video-player" controls>
             <source
               src="https://thelongesthumstore.sgp1.cdn.digitaloceanspaces.com/IM-2250/berry-bunch_handheld-windmill-fan.mp4"
               type="video/mp4"
             />
-            Your browser does not support the video tag.
           </video>
 
           <div class="video-nav">
@@ -166,11 +165,6 @@
           </div>
         </div>
 
-        <div class="bottom-left-image">
-          <img src="123.PNG" alt="Description of image" />
-        </div>
-
-        <!-- RIGHT: INSTRUCTIONS -->
         <div class="instructions">
           <h2>Instructions:</h2>
           <ol>
@@ -211,7 +205,9 @@
               Blow wind into the windmill using your mouth and watch it whirl!
             </li>
           </ol>
-
+          <!--  the addition of a special tip prevents the website from appearing normal or too simple. 
+  The <div class element allows the "special tip" title to be seperate from the instructions above.
+  This appears to be more unique, when combined with the pink background that stands out of the page -->
           <div class="special-tip">
             <h3>Special tip: What to do if the windmill isn't working?</h3>
             <p>
@@ -228,7 +224,7 @@
       <p>&copy; Video Credit - Berry Bunch Family</p>
       <p>&copy; Artwork Credit - Anika Choubey (s4095477)</p>
     </footer>
-
+    <!--The  javascript function is in this index.html section  because it didn’t work when placed in script.js. Placing it after the video element ensured proper usability, as it loaded properly and worked as intended. -->
     <script>
       function seekToTime(seconds) {
         const video = document.getElementById("custom-video-player");

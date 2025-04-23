@@ -10,15 +10,6 @@
   --btn-hover-bg: #388e3c;
 }
 
-body,
-h1,
-p,
-ul,
-ol {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   font-family: "Arial", sans-serif;
   background-color: var(--primary-bg-color);
@@ -29,7 +20,6 @@ body {
   align-items: center;
 }
 
-/* Header Styling */
 header {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -38,7 +28,6 @@ header {
   width: 100%;
 }
 
-/* Navigation Styling */
 nav {
   margin-top: 20px;
   text-align: center;
@@ -58,7 +47,6 @@ nav a {
   font-size: 30px;
 }
 
-/* 💡 CHANGED: Main Video Section */
 .video-section {
   display: flex;
   justify-content: space-between;
@@ -66,57 +54,38 @@ nav a {
   padding: 40px 20px;
   max-width: 1200px;
   width: 100%;
-  gap: 20px; /*  REDUCED from 40px to bring elements closer */
-  flex-wrap: wrap; /* 🆕 ADDED: allows wrapping to avoid layout breakage */
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
-/* Video Styling */
-.tutorial-video {
-  width: 55%; /*  INCREASED from 48% for better visibility */
-  height: auto;
-  border: 5px solid var(--accent-color);
-  border-radius: 12px;
-  box-sizing: border-box;
-  margin-bottom: 20px;
-}
-
-/* Instructions Styling */
 .instructions {
   width: 40%;
   font-size: 18px;
   line-height: 1.6;
-  color: black;
+  color: blue;
   font-family: "Shadows Into Light Two", cursive;
 }
 
-/* CHANGED: Video Navigation Buttons */
 .video-nav {
   display: flex;
   justify-content: center;
-  gap: 10mm; /* Set the gap to 10mm between buttons */
-  flex-wrap: wrap; /* 🆕 ADDED: allows buttons to wrap */
+  gap: 10mm;
+  flex-wrap: wrap;
   margin-top: 10px;
 }
 
 .video-nav button {
   background-color: var(--btn-bg);
   color: white;
-  padding: 10px 15px; /* 💡 REDUCED horizontal padding */
-  border: none;
+  padding: 10px 15px;
   border-radius: 8px;
-  font-size: 14px; /* 💡 SLIGHTLY smaller to avoid button spillover */
+  font-size: 14px;
   cursor: pointer;
   font-family: "Shadows Into Light Two", cursive;
   transition: background-color 0.3s ease;
-  outline: none; /* REMOVED the outline to prevent the pink outline */
-  max-width: 100%; /* 🆕 ADDED: ensures buttons don’t overflow */
+  max-width: 100%;
 }
 
-.video-nav button:hover {
-  background-color: var(--btn-hover-bg);
-}
-
-/* Footer Styling */
 footer {
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
@@ -126,7 +95,6 @@ footer {
   margin-top: 40px;
 }
 
-/* Headings and Text Styling */
 h1 {
   color: white;
   text-align: center;
@@ -164,7 +132,6 @@ strong {
   font-family: "Crafty Girls", cursive;
 }
 
-/* Special Tip Styling */
 .special-tip {
   margin-top: 30px;
   padding: 15px;
@@ -213,17 +180,14 @@ strong {
   }
 }
 
-/* Styling for Bottom-Left Image */
-.bottom-left-image {
-  position: absolute; /* Changed from fixed to absolute for placement within the page flow */
-  bottom: -330px; /* Adjusted to position it just under the buttons */
-  left: 52px; /* Left position */
-  z-index: 10;
-}
-
 .bottom-left-image img {
-  width: 550px; /* Adjust image size */
-  height: auto; /* Maintain aspect ratio */
-  border: 5px solid var(pink); /* Pink border around the image */
-  border-radius: 8px; /* Optional: Rounded corners for the border */
+  width: 550px;
+  height: auto;
+  position: absolute;
+  bottom: -330px;
+  left: 52px;
+  z-index: 10;
+  border: 5px solid var(pink);
+  border-radius: 8px;
+  /*  adding rounded corners to the image allows it to appear similar to the rounded corners in the vidoe above, thus not looking irregular.  */
 }
