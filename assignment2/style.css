@@ -55,7 +55,6 @@ nav a {
   max-width: 1200px;
   width: 100%;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .instructions {
@@ -144,7 +143,20 @@ strong {
   color: black;
 }
 
-/* Responsive for Small Screens */
+.bottom-left-image img {
+  width: 550px;
+  height: auto;
+  position: absolute;
+  bottom: -330px;
+  left: 52px;
+  z-index: 10;
+  border: 5px solid var(pink);
+  border-radius: 8px;
+  /*  adding rounded corners to the image allows it to appear similar to the rounded corners in the vidoe above, thus not looking irregular.  */
+}
+
+/* this specific code written seperately from the other video coding elements from above fixed the issues I had with video and timeskip button placement. */
+/* adjusting the width, height, and  alignment prevented the video from moving around the page when the buttons were added, vice versa if any other elements were being moved around as well */
 @media (max-width: 768px) {
   .video-section {
     flex-direction: column;
@@ -166,28 +178,4 @@ strong {
     width: 90%;
     margin-bottom: 10px;
   }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 20px;
-  }
-
-  p {
-    font-size: 16px;
-  }
-}
-
-.bottom-left-image img {
-  width: 550px;
-  height: auto;
-  position: absolute;
-  bottom: -330px;
-  left: 52px;
-  z-index: 10;
-  border: 5px solid var(pink);
-  border-radius: 8px;
-  /*  adding rounded corners to the image allows it to appear similar to the rounded corners in the vidoe above, thus not looking irregular.  */
 }
