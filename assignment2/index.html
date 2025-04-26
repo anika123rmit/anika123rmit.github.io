@@ -24,7 +24,7 @@
         justify-content: center;
         width: 100%;
       }
-
+      /*  In this video section, the repetition of display: flex;, width and height buttons ensured that the media player stayed in it's place on the website, allowing me to position elements such as the instructions and artwork around the video.  */
       .video-section {
         display: flex;
         flex-direction: row;
@@ -103,7 +103,7 @@
   <div class="bottom-left-image">
     <img src="123.PNG" alt="Description of image" />
   </div>
-  <!--  the addition of a windmill image ( created through illustrator) filled in the odd gap that was prevelant before in the bottom left hand corner of the website-->
+  <!--  the addition of a windmill image ( created through adobe illustrator) filled in the odd gap that was prevelant before in the bottom left hand corner of the website-->
 
   <body>
     <!-- CANVAS PROVIDED  MAIN CODE -->
@@ -155,13 +155,14 @@
               type="video/mp4"
             />
           </video>
-
+          <!-- The <button onclick="seekToTime feature ensures the exact time specified plays on the media player when the user presses the buttons.  -->
           <div class="video-nav">
             <button onclick="seekToTime(2)">Intro</button>
             <button onclick="seekToTime(15)">Materials</button>
             <button onclick="seekToTime(41)">Part 1</button>
             <button onclick="seekToTime(184)">Combining parts together</button>
             <button onclick="seekToTime(215)">Part 2</button>
+            <!--  I chose to include a maximum of 5 buttons as any more would have been overwhemling for the user.-->
           </div>
         </div>
 

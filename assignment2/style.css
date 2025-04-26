@@ -9,6 +9,8 @@
   --btn-bg: #4caf50;
   --btn-hover-bg: #388e3c;
 }
+/*  Having a bright colour pallete of mostly yellow, pink and green creates a friendly appearance to the website. */
+/*  after receiving feedback on canvas for assignment 1 in regards of not repeating the same code, I decided to place all the colour choices for the website in one section.  */
 
 body {
   font-family: "Arial", sans-serif;
@@ -152,7 +154,7 @@ strong {
   z-index: 10;
   border: 5px solid var(pink);
   border-radius: 8px;
-  /*  adding rounded corners to the image allows it to appear similar to the rounded corners in the vidoe above, thus not looking irregular.  */
+  /*  adding rounded corners to the image allows it to appear similar to the rounded corners in the video above, thus not looking irregular.  */
 }
 
 /* this specific code written seperately from the other video coding elements from above fixed the issues I had with video and timeskip button placement. */
@@ -162,7 +164,7 @@ strong {
     flex-direction: column;
     align-items: center;
   }
-
+  /*  again,  similar code regarding video navigation buttons have been placed both in the index file and css, to prevent the video  and/or the buttons from moving when  I was adding other elements in the media player website  */
   .tutorial-video,
   .instructions {
     width: 90%;
