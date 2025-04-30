@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crafting 4 Fun</title>
+    <!--  By adding this title, the website appears to be a friendly, learn to craft website, being encouraging and appealing to youngsters -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,34 +14,14 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      @media (max-width: 768px) {
-        .video-section {
-          flex-direction: column;
-        }
-
-        .instructions,
-        .tutorial-video-wrapper {
-          width: 100%;
-        }
-
-        .video-nav {
-          justify-content: center;
-        }
-
-        .video-nav button {
-          width: 90%;
-        }
-      }
-    </style>
+    href="https://fonts.googleapis.com/css2?family=Crafty+Girls&display=swap"
+    rel="stylesheet"
   </head>
 
   <div class="bottom-left-image">
     <img src="123.PNG" alt="Description of image" />
   </div>
+  <!--  the addition of a windmill image ( created through adobe illustrator) filled in the odd gap that was prevalent before in the bottom left hand corner of the website-->
 
   <body>
     <header>
@@ -70,16 +51,17 @@
           <div id="progress-bar-container">
             <div id="progress-bar"></div>
           </div>
-
+          <!-- The <button onclick="seekToTime feature ensures the exact time specified plays on the media player when the user presses the buttons.  -->
           <div class="video-nav">
             <button onclick="seekToTime(2)">Intro</button>
             <button onclick="seekToTime(15)">Materials</button>
             <button onclick="seekToTime(41)">Part 1</button>
             <button onclick="seekToTime(184)">Combining parts together</button>
             <button onclick="seekToTime(215)">Part 2</button>
+            <!--  I chose to include a maximum of 5 buttons as any more would have been overwhemling for the user.-->
           </div>
         </div>
-
+        <!--  step by step short instructions allows the user to read the instructions simultaneously  alongside the video -->
         <div class="instructions">
           <h2>Instructions:</h2>
           <ol>
@@ -126,6 +108,9 @@
               Use your hands to create a little gap between the windmill and the
               pipe. Push them apart slightly. Then, try blowing wind at the
               windmill again.
+              <!--  the addition of a special tip prevents the website from appearing normal or too simple. 
+  The <div class element allows the "special tip" title to be seperate from the instructions above.
+  This appears to be more unique, when combined with the pink background that stands out of the page -->
             </p>
           </div>
         </div>
@@ -138,6 +123,7 @@
       <p>&copy;Icons by <a href="https://icons8.com/">Icons8</a></p>
     </footer>
 
+    <!--The  javascript function is in this index.html section  because it didn’t work when placed in script.js. Placing it after the video element ensured proper usability, as it loaded properly and worked as intended. -->
     <script>
       function seekToTime(seconds) {
         const video = document.getElementById("custom-video-player");

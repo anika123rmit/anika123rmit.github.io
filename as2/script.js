@@ -9,6 +9,7 @@ function seekVideo(seconds) {
     //   the currentTime function allows the user to play specific parts of the video and rewatch parts if they get stuck in a step and need repetition.
     //  this code is linked to the <button onclick function in index.html.
 
+    //   the addition of a progress bar to the media player allows for extra clarity,allowing the viewer to see how far within the video they have reached.
     const myVideo = document.querySelector("#my-video");
     const progressBar = document.querySelector("#progress-bar");
 
@@ -18,5 +19,5 @@ function seekVideo(seconds) {
       let progress = (myVideo.currentTime / myVideo.duration) * 100;
       progressBar.style.width = progress + "%";
     }
-  } // <-- Closing brace for the "if" statement
-} // <-- Closing brace for the "seekVideo" function
+  }
+}

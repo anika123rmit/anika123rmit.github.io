@@ -9,7 +9,7 @@
   --btn-bg: #4caf50;
   --btn-hover-bg: #388e3c;
 }
-/*  Having a bright colour pallete of mostly yellow, pink and green creates a friendly appearance to the website. */
+/*  Having a bright colour pallete of mostly yellow, pink and green creates a friendly appearance to the website.  This encourages people to get involved and truly explore the website and media player's elements.*/
 /*  after receiving feedback on canvas for assignment 1 in regards of not repeating the same code, I decided to place all the colour choices for the website in one section.  */
 
 body {
@@ -46,6 +46,7 @@ nav a {
   text-decoration: none;
   color: var(--link-color);
   font-family: "Crafty Girls", cursive;
+  /*  this specific font allows the letters in the title to appear curvy and loose, contrasting with the light yellow background and representing a sense of playfulness and creativity. */
   font-size: 30px;
 }
 
@@ -165,7 +166,7 @@ strong {
     flex-direction: column;
     align-items: center;
   }
-  /*  again,  similar code regarding video navigation buttons have been placed both in the index file and css, to prevent the video  and/or the buttons from moving when  I was adding other elements in the media player website  */
+
   .tutorial-video,
   .instructions {
     width: 90%;
@@ -200,6 +201,7 @@ strong {
   height: 100%;
   width: 0%;
   background-color: #f47eb7;
+  /*  this shade of pink is the same shade that has been used for the outline of the media player's video and the "special tip" section. */
   transition: width 0.25s;
 }
 
@@ -209,6 +211,7 @@ strong {
   width: 100%;
 }
 
+/*  In this video section, the display: flex;, width and height buttons ensured that the media player stayed in it's place on the website, allowing me to position elements such as the instructions and artwork around the video.  */
 .video-section {
   display: flex;
   flex-direction: row;
@@ -244,6 +247,7 @@ strong {
 .video-nav button {
   flex-shrink: 0;
   background-color: #4caf50;
+  /* having green buttons on a light yellow background contrast well and the background ensures the green buttons "pop" appearance wise. */
   color: white;
   padding: 10px 16px;
   border: none;
