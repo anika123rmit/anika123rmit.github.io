@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Crafting 4 Fun</title>
-    <!--  By adding this title, the website appears to be a friendly, learn to craft website, being encouraging and appealing to youngsters -->
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,67 +17,6 @@
       rel="stylesheet"
     />
     <style>
-      /* due to some consistent errors occuring with the "side by side" layout, I had to place this piece of code here instead of putting it in the style.css section to make the appearance of the website and media player work properly.  */
-      .container {
-        display: flex;
-        justify-content: center;
-        width: 100%;
-      }
-      /*  In this video section, the repetition of display: flex;, width and height buttons ensured that the media player stayed in it's place on the website, allowing me to position elements such as the instructions and artwork around the video.  */
-      .video-section {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
-        max-width: 1200px;
-        width: 100%;
-        gap: 30px;
-        padding: 30px 20px;
-      }
-
-      .tutorial-video-wrapper {
-        flex: 1;
-        min-width: 0;
-      }
-
-      .tutorial-video {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border: 5px solid #f47eb7;
-        border-radius: 12px;
-        margin-bottom: 20px;
-      }
-
-      .video-nav {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: flex-start;
-      }
-
-      .video-nav button {
-        flex-shrink: 0;
-        background-color: #4caf50;
-        /* having green buttons on a light yellow background contrast well and the background ensures the green buttons "pop" appearance wise. */
-        color: white;
-        padding: 10px 16px;
-        border: none;
-        border-radius: 8px;
-        font-size: 16px;
-        cursor: pointer;
-        font-family: "Shadows Into Light Two", cursive;
-        transition: background-color 0.3s ease;
-      }
-
-      .instructions {
-        flex: 1;
-        max-width: 600px;
-        font-size: 18px;
-        font-family: "Shadows Into Light Two", cursive;
-        color: black;
-      }
-
       @media (max-width: 768px) {
         .video-section {
           flex-direction: column;
@@ -103,35 +41,8 @@
   <div class="bottom-left-image">
     <img src="123.PNG" alt="Description of image" />
   </div>
-  <!--  the addition of a windmill image ( created through adobe illustrator) filled in the odd gap that was prevelant before in the bottom left hand corner of the website-->
 
   <body>
-    <!-- CANVAS PROVIDED  MAIN CODE -->
-    <script>
-      (function () {
-        (() => {
-          try {
-            if (!setInterval) return;
-            setInterval(() => {
-              let t = document.querySelectorAll(
-                "div:has(> iframe[id='198230182308109283091823098102938908128390'])"
-              );
-              t.forEach((t) => {
-                let e = t.getAttribute("style");
-                if (e) {
-                  e = e.replace("display: initial", "display: none");
-                  t.setAttribute("style", e);
-                }
-              });
-            }, 100);
-          } catch (t) {
-            console.log(t);
-          }
-        })();
-      })();
-    </script>
-    <!-- CANVAS PROVIDED MAIN  CODE END -->
-
     <header>
       <h1>Crafting 4 Fun</h1>
     </header>
@@ -155,14 +66,17 @@
               type="video/mp4"
             />
           </video>
-          <!-- The <button onclick="seekToTime feature ensures the exact time specified plays on the media player when the user presses the buttons.  -->
+
+          <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+          </div>
+
           <div class="video-nav">
             <button onclick="seekToTime(2)">Intro</button>
             <button onclick="seekToTime(15)">Materials</button>
             <button onclick="seekToTime(41)">Part 1</button>
             <button onclick="seekToTime(184)">Combining parts together</button>
             <button onclick="seekToTime(215)">Part 2</button>
-            <!--  I chose to include a maximum of 5 buttons as any more would have been overwhemling for the user.-->
           </div>
         </div>
 
@@ -206,9 +120,6 @@
               Blow wind into the windmill using your mouth and watch it whirl!
             </li>
           </ol>
-          <!--  the addition of a special tip prevents the website from appearing normal or too simple. 
-  The <div class element allows the "special tip" title to be seperate from the instructions above.
-  This appears to be more unique, when combined with the pink background that stands out of the page -->
           <div class="special-tip">
             <h3>Special tip: What to do if the windmill isn't working?</h3>
             <p>
@@ -221,20 +132,26 @@
       </div>
     </main>
 
-
-
     <footer>
       <p>&copy; Video Credit - Berry Bunch Family</p>
       <p>&copy; Artwork Credit - Anika Choubey (s4095477)</p>
-      <p>&copy;Icons by <a href="https://icons8.com/">Icons8</a></footer>
+      <p>&copy;Icons by <a href="https://icons8.com/">Icons8</a></p>
     </footer>
-    <!--The  javascript function is in this index.html section  because it didn’t work when placed in script.js. Placing it after the video element ensured proper usability, as it loaded properly and worked as intended. -->
+
     <script>
       function seekToTime(seconds) {
         const video = document.getElementById("custom-video-player");
         video.currentTime = seconds;
         video.play();
       }
+
+      const video = document.getElementById("custom-video-player");
+      const progressBar = document.getElementById("progress-bar");
+
+      video.addEventListener("timeupdate", () => {
+        const percentage = (video.currentTime / video.duration) * 100;
+        progressBar.style.width = percentage + "%";
+      });
     </script>
   </body>
 </html>

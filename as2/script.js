@@ -6,8 +6,16 @@ function seekVideo(seconds) {
   const video = document.getElementById("custom-video-player");
   if (video) {
     video.currentTime = seconds;  
-    /* the currentTime function allows the user to play specific parts of the crafting tutorial.
-    video.play();
-  }
+  //   the currentTime function allows the user to play specific parts of the video and rewatch parts if they get stuck in a step and need repetition.
+//  this code is linked to the <button onclick function in index.html.
+
+const myVideo = document.querySelector("#my-video");
+const progressBar = document.querySelector("#progress-bar");
+
+myVideo.addEventListener("timeupdate", updateProgressbar);
+
+function updateProgressbar() {
+  let progress = (myVideo.currentTime / myVideo.duration) * 100;
+  progressBar.style.width = progress + "%";
 }
-/* This code is linked to the <button onclick fucntion in index.html.
+
