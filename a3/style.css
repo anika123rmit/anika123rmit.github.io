@@ -1,0 +1,14 @@
+body {
+  background-color: pink;
+}
+
+h1 {
+  color: black;
+  text-align: center;
+  font-family: "Fuzzy Bubbles", sans-serif;
+  /*  comment abt font  */
+  font-weight: 550;
+  font-style: normal;
+  font-size: 60px;
+  margin-top: 40px;
+}
