@@ -113,19 +113,7 @@ After doing research, the masonry layout proved to be effecient in creating a pi
 }
 
 .heart-button.pop {
-  animation: pop 0.3s ease;
-}
-
-@keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.4);
-  }
-  100% {
-    transform: scale(1);
-  }
+  animation: bump 0.3s ease;
 }
 
 .beating-heart {
