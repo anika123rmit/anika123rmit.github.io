@@ -4,13 +4,13 @@ const totalClicks = document.getElementById("total-clicks");
 
 let totalCount = 0;
 
-// Adds the clicking option for each individual heart button
+// This code adds the clicking option for each individual heart button
 heartButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const countSpan = button.nextElementSibling;
     countSpan.textContent = parseInt(countSpan.textContent) + 1;
 
-    // Increases the amount of clicks that a user can do for an image. This allows the user to easily click the heart button as many times as they want, creating a game-like effect.
+    // Increases the amount of clicks that a user can do for an image. This allows the user to easily click the heart button as many times as they want, creating a game-like effect and easy usability when clicking.
     totalCount++;
     totalClicks.textContent = `Total Clicks: ${totalCount}`;
 

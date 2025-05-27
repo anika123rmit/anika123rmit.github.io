@@ -1,15 +1,16 @@
 /* context-interactive clicking game  */
+/* design intent- to create an interactive clicking game which engages the user visually and  promotes positive, engaging interactivity */
 
 body {
   margin: 0;
   background-color: pink;
 }
-/* since this is based on the context of a game, a bright colour like pink creates a sense of playfulness and excitement.
+/* since this is based on the context of a game, a bright colour like pink creates a sense of playfulness and excitement, and also is bold in terms of colour.
 -creates a enegrgetic atmosphere within the website's design  */
 
 .page-border {
   border: 5px dashed black;
-  /*  addition of the  colour black in the  border is very strong- stands out extremel well and creates a partition between edge of website and contents inside the border. */
+  /*  addition of the  colour black in the  border is very strong- stands out extremely well and creates a partition between edge of website and contents inside the border. */
   padding: 20px;
   margin: 20px;
   box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
 h1 {
   text-align: center;
   font-family: "Fuzzy Bubbles", sans-serif;
-  /*  the fuzzy bubbles font complements the context gaming, through it's carefree, flowing font design.
+  /*  the fuzzy bubbles font complements the context gaming, through it's carefree, flowing font design for each alphabetical letter.
   - creates a sense of relaxation when playing the clicking game for user */
   color: black;
   font-size: 60px;
@@ -66,6 +67,8 @@ After doing research, the masonry layout proved to be effecient in creating a pi
   font-size: 24px;
   background: none;
   border: none;
+  /* having no background on the heart button allows the area between the images and 'like' buttons to look spacious, slightly seperated and not overcrowded.
+  This ensures easy and direct usability for the user as they can clearly see the like buttons for each image. */
   cursor: pointer;
 }
 
@@ -125,5 +128,6 @@ After doing research, the masonry layout proved to be effecient in creating a pi
   font-weight: bold;
   font-size: 16px;
   opacity: 0.7;
-  /*  light opacity- allows the user to still see the image behind the button a little bit bbeing see-through, preventing button from overpowering the images */
+  /*  light opacity- allows the user to still see the image behind the button a little bit bbeing see-through,
+   preventing button from overpowering the images */
 }
