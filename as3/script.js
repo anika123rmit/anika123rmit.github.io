@@ -1,33 +1,31 @@
-// Select all heart buttons
 const heartButtons = document.querySelectorAll(".heart-button");
 
-// Select total click counter
 const totalClicks = document.getElementById("total-clicks");
 
-// Keep track of total clicks
 let totalCount = 0;
 
-// Add click event listener to each heart button
+// Adds the clicking option for each individual heart button
 heartButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Increase individual click count
     const countSpan = button.nextElementSibling;
     countSpan.textContent = parseInt(countSpan.textContent) + 1;
 
-    // Increase total click count
+    // Increases the amount of clicks that a user can do for an image
     totalCount++;
     totalClicks.textContent = `Total Clicks: ${totalCount}`;
 
-    // Add animation class
+    // the addition of the "pop" animation feature allows the heart to move up and down for a quick second when the user presses the heart "like" button.
+    // the addition of the  animation prevents the user's "liking" experience (for each picture)from being too plain or boring.
     button.classList.add("pop");
 
-    // Remove the class after the animation ends so it can trigger again next click
+    //   the "animationend" part below allows the heart animation to end after it is clicked ,
+    // ( when the user would click on the heart to like an image).
     button.addEventListener(
       "animationend",
       () => {
         button.classList.remove("pop");
       },
-      { once: true } // Ensures this event listener only runs once per click
+      { once: true }
     );
   });
 });
