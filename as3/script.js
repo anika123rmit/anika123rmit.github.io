@@ -10,7 +10,7 @@ heartButtons.forEach((button) => {
     const countSpan = button.nextElementSibling;
     countSpan.textContent = parseInt(countSpan.textContent) + 1;
 
-    // Increases the amount of clicks that a user can do for an image
+    // Increases the amount of clicks that a user can do for an image. This allows the user to easily click the heart button as many times as they want, creating a game-like effect.
     totalCount++;
     totalClicks.textContent = `Total Clicks: ${totalCount}`;
 
